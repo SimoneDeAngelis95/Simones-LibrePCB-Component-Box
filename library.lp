@@ -1,0 +1,11 @@
+(librepcb_library 6f4da986-3132-4995-abaf-ca51ce158b35
+ (name "Simone's LibrePCB Component Box")
+ (description "A curated LibrePCB library of reusable electronic components, symbols, packages, devices, and 3D models.")
+ (keywords "LibrePCB, components, symbols, packages, devices, 3D models")
+ (author "Simone De Angelis")
+ (version "1")
+ (created 2026-04-25T10:36:59Z)
+ (deprecated false)
+ (url "https://github.com/SimoneDeAngelis95/Simones-LibrePCB-Component-Box")
+ (manufacturer "")
+)
