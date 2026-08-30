@@ -58,5 +58,7 @@ change concerns mechanical dimensions or pin assignments.
 
 ## License
 
-A license has not been selected yet. Until one is added, normal copyright rules
-apply.
+This library is released under the
+[Creative Commons CC0 1.0 Universal](LICENSE.txt) public domain dedication.
+You may use, modify, and redistribute it for any purpose, including commercial
+projects, without attribution requirements.
