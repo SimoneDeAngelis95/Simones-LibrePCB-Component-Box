@@ -1,9 +1,9 @@
 (librepcb_package 313e1112-789a-4806-8507-1dabb5e1184d
- (name "MCP6022")
- (description "")
- (keywords "")
+ (name "PDIP-8-W7.62-P2.54")
+ (description "Generic 8-pin plastic dual in-line package, 7.62 mm row spacing and 2.54 mm pin pitch.")
+ (keywords "PDIP-8, DIP-8, THT, 7.62 mm, 2.54 mm")
  (author "Simone De Angelis")
- (version "0.2")
+ (version "0.3")
  (created 2026-08-26T09:06:00Z)
  (deprecated false)
  (generated_by "")
@@ -19,7 +19,7 @@
  (pad 7002283b-bf93-4598-9ea8-d4d80d880e25 (name "6"))
  (pad 20079330-83f6-4d67-ab9c-ae3646918b67 (name "7"))
  (pad ae88879d-6511-4337-a991-fb49f1a46995 (name "8"))
- (3d_model 7ff3b2e0-71d0-4038-be10-c9204fce87cd (name "MCP6022"))
+ (3d_model 7ff3b2e0-71d0-4038-be10-c9204fce87cd (name "PDIP-8-W7.62-P2.54"))
  (footprint 42ad2a00-695c-4efd-ae1e-6e2787360db7
   (name "default")
   (description "")
