@@ -21,6 +21,7 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 - 74HC14 hex Schmitt-trigger inverter
 - CD4051 analog multiplexer/demultiplexer
 - MCP6022 dual operational amplifier
+- OPA2134PA dual audio JFET-input operational amplifier
 - MCP23017 I/O-expander module
 - I2C LCD display module
 - KY-040 rotary encoder module
