@@ -3,7 +3,7 @@
  (description "Texas Instruments OPA2134 dual audio JFET-input operational amplifier in 8-pin PDIP package.")
  (keywords "OPA2134PA, PDIP-8, audio, op-amp, JFET")
  (author "Simone De Angelis")
- (version "0.2")
+ (version "0.3")
  (created 2026-09-01T00:00:00Z)
  (deprecated false)
  (generated_by "")
