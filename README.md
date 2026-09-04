@@ -16,6 +16,8 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 
 ## Included parts
 
+### Modules and integrated circuits
+
 - Daisy Seed3, including a custom 40-pin THT package and detailed STEP model
 - 6N138 optocoupler
 - 74HC14 hex Schmitt-trigger inverter
@@ -25,9 +27,22 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 - MCP23017 I/O-expander module
 - I2C LCD display module
 - KY-040 rotary encoder module
+
+### Connectors and controls
+
 - Female 5-pin DIN MIDI connector
 - TS jack
+- Two-pin DC power jack connection
 - External switch
+- Wired three-pin potentiometer connection (`POT-WIRE-P2.54`)
+- 16 mm right-angle PCB potentiometer with 5 mm terminal pitch
+
+### Discrete semiconductors
+
+- 1N5817 Schottky diode with a reusable DO-41 THT package
+
+The potentiometer devices reuse the standard potentiometer component from the
+LibrePCB Base Library, which is declared as a dependency.
 
 ## Installation
 
