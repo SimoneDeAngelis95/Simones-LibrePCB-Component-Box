@@ -41,6 +41,7 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 ### Discrete semiconductors
 
 - 1N5817 Schottky diode with a reusable DO-41 THT package
+- Common-cathode RGB LED with a four-pin 2.54 mm wired footprint
 
 The potentiometer devices reuse the standard potentiometer component from the
 LibrePCB Base Library, which is declared as a dependency.

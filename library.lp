@@ -3,7 +3,7 @@
  (description "A curated LibrePCB library of reusable electronic components, symbols, packages, devices, and 3D models.")
  (keywords "LibrePCB, components, symbols, packages, devices, 3D models")
  (author "Simone De Angelis")
- (version "1.8")
+ (version "1.9")
  (created 2026-04-25T10:36:59Z)
  (deprecated false)
  (url "https://github.com/SimoneDeAngelis95/Simones-LibrePCB-Component-Box")
