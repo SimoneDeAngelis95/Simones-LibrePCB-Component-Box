@@ -34,6 +34,7 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 - TS jack
 - Two-pin DC power jack connection
 - External switch
+- Three-position SPDT switch (`ON-OFF-ON`) with a 2.54 mm wired footprint
 - Wired three-pin potentiometer connection (`POT-WIRE-P2.54`)
 - 16 mm right-angle PCB potentiometer with 5 mm terminal pitch
 
