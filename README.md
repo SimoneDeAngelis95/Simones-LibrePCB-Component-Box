@@ -24,6 +24,7 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 - CD4051 analog multiplexer/demultiplexer
 - MCP6022 dual operational amplifier
 - OPA2134PA dual audio JFET-input operational amplifier
+- OPA197 single precision rail-to-rail operational amplifier in SOIC-8
 - MCP23017 I/O-expander module
 - I2C LCD display module
 - KY-040 rotary encoder module
@@ -44,8 +45,8 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 - Common-cathode RGB LED with a four-pin 2.54 mm wired footprint
 - Common-cathode red/green 5 mm THT LED with a custom STEP model
 
-The potentiometer devices reuse the standard potentiometer component from the
-LibrePCB Base Library, which is declared as a dependency.
+The potentiometer devices and the OPA197 SOIC-8 device reuse standard elements
+from the LibrePCB Base Library, which is declared as a dependency.
 
 ## Installation
 
