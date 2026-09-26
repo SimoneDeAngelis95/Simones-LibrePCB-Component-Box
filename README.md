@@ -25,6 +25,7 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 - MCP6022 dual operational amplifier
 - OPA2134PA dual audio JFET-input operational amplifier
 - OPA197 single precision rail-to-rail operational amplifier in SOIC-8
+- LT1054 switched-capacitor voltage converter in PDIP-8
 - MCP23017 I/O-expander module
 - I2C LCD display module
 - KY-040 rotary encoder module
