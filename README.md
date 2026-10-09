@@ -33,8 +33,9 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 ### Connectors and controls
 
 - Female 5-pin DIN MIDI connector
-- TS jack
-- Two-pin DC power jack connection
+- TS jack, with original and compact wired footprints
+- Two-pin DC power jack connection, with original and compact wired footprints
+- Neutrik NMJ4HCD2 mono switched PCB jack, including its official STEP model
 - External switch
 - Three-position SPDT switch (`ON-OFF-ON`) with a 2.54 mm wired footprint
 - Wired three-pin potentiometer connection (`POT-WIRE-P2.54`)
