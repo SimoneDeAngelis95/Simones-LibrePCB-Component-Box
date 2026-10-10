@@ -44,8 +44,19 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 ### Discrete semiconductors
 
 - 1N5817 Schottky diode with a reusable DO-41 THT package
+- Nexperia SOD-123W / CFP3 package with the manufacturer's recommended reflow
+  land pattern and official STEP model
 - Common-cathode RGB LED with a four-pin 2.54 mm wired footprint
 - Common-cathode red/green 5 mm THT LED with a custom STEP model
+
+### Capacitors
+
+- Panasonic SMD aluminium electrolytic capacitor, case C (5 x 5.8 mm)
+- Panasonic SMD aluminium electrolytic capacitor, case D (6.3 x 5.8 mm)
+- Panasonic SMD aluminium electrolytic capacitor, case F (8 x 10.2 mm)
+
+The Panasonic capacitor packages use the manufacturer's recommended land
+patterns and official STEP models.
 
 The potentiometer devices and the OPA197 SOIC-8 device reuse standard elements
 from the LibrePCB Base Library, which is declared as a dependency.
