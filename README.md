@@ -56,7 +56,8 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 - Panasonic SMD aluminium electrolytic capacitor, case F (8 x 10.2 mm)
 
 The Panasonic capacitor packages use the manufacturer's recommended land
-patterns and official STEP models.
+patterns and official STEP models. Ready-to-use devices are included for
+`EEEFK1V100R`, `EEEFK1V470P`, `EEEFK1V101P`, and `EEEFK1V221P`.
 
 The potentiometer devices and the OPA197 SOIC-8 device reuse standard elements
 from the LibrePCB Base Library, which is declared as a dependency.
