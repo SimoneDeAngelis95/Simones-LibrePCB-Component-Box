@@ -44,8 +44,8 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 ### Discrete semiconductors
 
 - 1N5817 Schottky diode with a reusable DO-41 THT package
-- Nexperia SOD-123W / CFP3 package with the manufacturer's recommended reflow
-  land pattern and official STEP model
+- Nexperia PMEG2010ER 20 V / 1 A Schottky rectifier with SOD-123W / CFP3
+  package, manufacturer-recommended reflow land pattern, and official STEP model
 - Common-cathode RGB LED with a four-pin 2.54 mm wired footprint
 - Common-cathode red/green 5 mm THT LED with a custom STEP model
 
