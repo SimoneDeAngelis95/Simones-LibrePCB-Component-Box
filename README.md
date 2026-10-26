@@ -39,6 +39,8 @@ The current release was created and tested with **LibrePCB 2.1.1**.
   with both switched and standard TS device variants
 - External switch
 - Three-position SPDT switch (`ON-OFF-ON`) with a 2.54 mm wired footprint
+- External 3PDT footswitch with nine accessible schematic contacts
+- Four-wire interface to an external 3PDT bypass and LED board
 - Wired three-pin potentiometer connection (`POT-WIRE-P2.54`)
 - 16 mm right-angle PCB potentiometer with 5 mm terminal pitch
 
@@ -64,6 +66,35 @@ The potentiometer devices and the OPA197 SOIC-8 device reuse standard elements
 from the LibrePCB Base Library, which is declared as a dependency.
 
 ## Installation
+
+### External 3PDT bypass wiring
+
+Use `3PDT Footswitch (External)` to document the external switch in the
+schematic. It contains three mechanically linked changeover contacts, labelled
+`A1/A2/A3`, `B1/B2/B3`, and `C1/C2/C3`. The common terminals are `A2`, `B2`,
+and `C2`. This component is schematic-only and does not place a switch footprint
+on the main PCB. Check the physical terminal orientation on the actual switch.
+
+Use the separate `3PDT Bypass Module (Wired)` device for the four wire connections
+on the main PCB. Its `3PDT-BYPASS-WIRE-P2.54` package has 2.54 mm pad spacing,
+1.0 mm finished holes, 2.0 mm copper pads, and no surrounding silkscreen border.
+
+| Main PCB connection | Musikding 3PDT + LED board connection |
+| --- | --- |
+| `9V` | `+9V` |
+| `GND` | `GND` |
+| `PCB_IN` | `BI` (effect circuit input) |
+| `PCB_OUT` | `BO` (effect circuit output) |
+
+The jacks connect directly to `JI` and `JO` and the corresponding ground pads
+on the external board. The LED and its series resistor also belong to the
+external assembly. When documenting these parts on the main project schematic,
+use schematic-only components for parts that are not mounted on the main PCB.
+The four-wire package represents solder connections, not the physical footprint
+of the switch or the Musikding daughterboard. The switch symbol and the
+four-wire interface are separate components; wire their nets explicitly.
+
+### Install the library
 
 Close LibrePCB, then clone the repository into the `data/libraries/local`
 directory of your LibrePCB workspace:
