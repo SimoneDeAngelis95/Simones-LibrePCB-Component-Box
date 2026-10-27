@@ -89,8 +89,10 @@ footprint for every 6 mm trimmer or an official manufacturer CAD model.
 Use `3PDT Footswitch (External)` to document the external switch in the
 schematic. It contains three mechanically linked changeover contacts, labelled
 `A1/A2/A3`, `B1/B2/B3`, and `C1/C2/C3`. The common terminals are `A2`, `B2`,
-and `C2`. This component is schematic-only and does not place a switch footprint
-on the main PCB. Check the physical terminal orientation on the actual switch.
+and `C2`. The component represents an externally wired switch and currently has
+`schematic_only` set to `false`; it has no associated switch device or footprint.
+Main-board connection pads must be defined separately. Check the physical
+terminal orientation on the actual switch.
 
 Use the separate `3PDT Bypass Module (Wired)` device for the four wire connections
 on the main PCB. Its `3PDT-BYPASS-WIRE-P2.54` package has 2.54 mm pad spacing,
