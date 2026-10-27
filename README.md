@@ -41,6 +41,9 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 - Three-position SPDT switch (`ON-OFF-ON`) with a 2.54 mm wired footprint
 - External 3PDT footswitch with nine accessible schematic contacts
 - Four-wire interface to an external 3PDT bypass and LED board
+- External Bypass Board Interface — 4 Wire: numbered, required passive signals
+  `1 FX_IN`, `2 GND`, `3 FX_OUT`, `4 9V_PROTECTED`, with a matching generic
+  four-pad 2.54 mm wire-solder package
 - Wired three-pin potentiometer connection (`POT-WIRE-P2.54`)
 - 16 mm right-angle PCB potentiometer with 5 mm terminal pitch
 - Horizontal blue/white trimmer with a measured 6 x 6 mm THT footprint and
@@ -68,6 +71,47 @@ The potentiometer devices and the OPA197 SOIC-8 device reuse standard elements
 from the LibrePCB Base Library, which is declared as a dependency.
 
 ## Installation
+
+### Protected four-wire external bypass interface
+
+Component: `External Bypass Board Interface — 4 Wire` (prefix `J`, default
+value `BYPASS BOARD`). Select device `Bypass Board Interface — 4 Solder Wires`
+and package `WIRE-PADS-1X04-P2.54-D1.00`. This is a separate interface from
+the older `3PDT Bypass Module (Wired)`; the pin order is different.
+
+| Pin / pad | Signal | External board pad | Intended future J4 connection (documentation only) |
+| --- | --- | --- | --- |
+| 1 | `FX_IN` | `BI` | R1/C1 junction, fuzz input |
+| 2 | `GND` | `GND` | Circuit ground |
+| 3 | `FX_OUT` | `BO` | Volume P2 wiper, fuzz output |
+| 4 | `9V_PROTECTED` | `+9V` | D1 cathode, before R5, LED supply branch |
+
+Signal directions refer to the fuzz circuit. All four signals are independent,
+passive and required, with empty `forced_net` fields. The component is not
+schematic-only. No internal wiring, commercial-board traces, external jacks,
+3PDT, LED or external R14 (4.7 kohm) are included.
+
+The footprint is viewed from the top/component side at zero rotation: pads
+1 through 4 run left to right at x = 0, 2.54, 5.08, 7.62 mm. Finished plated
+holes are 1.00 mm; copper pads are 2.00 mm. Pad 1 is square, others circular.
+THT solder mask openings are automatic on both sides; solder paste is off.
+The legend reads `IN`, `GND`, `OUT`, `+V`, with an additional pin-1 marker.
+Outlines and courtyard bound the solder-pad area, not a connector body.
+No physical connector, footswitch body or 3D model is assigned.
+
+| Element | UUID |
+| --- | --- |
+| Symbol | `41809c5c-6acb-4760-ac3f-986c7a327eea` |
+| Component | `80ac1e22-154c-4c1d-a3eb-0a1bff48f538` |
+| Package | `16265200-20bc-4acd-a80c-e7b0fa639c33` |
+| Device | `ad1ac83b-7524-4cba-ab19-98d48d937112` |
+
+Structural checks verified the file syntax, UUID references, pin-to-signal-to-pad
+mapping, required/passive settings, mask/paste settings, pad dimensions and
+spacing, and label/outline presence. Copper spacing is 0.54 mm and the radial
+annular ring is 0.50 mm. Native LibrePCB graphical/checker validation remains
+pending because the installed CLI cannot start in the automation environment.
+No El Pollo Diablo project schematic or board was edited to add this interface.
 
 ### Horizontal trimmer
 
