@@ -43,6 +43,8 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 - Four-wire interface to an external 3PDT bypass and LED board
 - Wired three-pin potentiometer connection (`POT-WIRE-P2.54`)
 - 16 mm right-angle PCB potentiometer with 5 mm terminal pitch
+- Horizontal blue/white trimmer with a measured 6 x 6 mm THT footprint and
+  a custom coloured STEP model (`Trimmer (THT 6x6 mm)`)
 
 ### Discrete semiconductors
 
@@ -66,6 +68,21 @@ The potentiometer devices and the OPA197 SOIC-8 device reuse standard elements
 from the LibrePCB Base Library, which is declared as a dependency.
 
 ## Installation
+
+### Horizontal trimmer
+
+Select `Trimmer (THT 6x6 mm)` as a device of the standard `Potentiometer`
+component. It uses `TRIMMER-THT-6X6-MEASURED`: the paired terminals are
+6 mm apart, and the isolated terminal is 6 mm from their line. The footprint
+uses 1.2 mm finished holes and 2.4 mm copper pads. The sample's fit and the
+isolated terminal's identity as the wiper (pad 2) were confirmed by the user.
+
+The device maps pad 2 to the wiper, pad 1 to CCW, and pad 3 to CW. The outer
+terminal rotation direction is assigned by convention and remains unverified
+on the actual sample. The custom STEP model reproduces the blue body, white
+cross-slot rotor, and three terminals aligned with the footprint; body details
+are approximate. This is a measured sample-specific footprint, not a universal
+footprint for every 6 mm trimmer or an official manufacturer CAD model.
 
 ### External 3PDT bypass wiring
 
