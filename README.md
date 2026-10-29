@@ -51,6 +51,10 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 
 ### Discrete semiconductors
 
+- onsemi 2N3904 NPN transistor with formed 2.54 mm-pitch leads; reuses
+  `Transistor NPN` and `TO-92-WIDE` from the Base Library. Device:
+  `2N3904 onsemi (TO-92-WIDE)`. Select footprint `compact` when placing it
+  (1.25 x 1.25 mm pads, 0.75 mm holes). Mapping: 1=E, 2=B, 3=C.
 - 1N5817 Schottky diode with a reusable DO-41 THT package
 - Nexperia PMEG2010ER 20 V / 1 A Schottky rectifier with SOD-123W / CFP3
   package, manufacturer-recommended reflow land pattern, and official STEP model
@@ -71,6 +75,32 @@ The potentiometer devices and the OPA197 SOIC-8 device reuse standard elements
 from the LibrePCB Base Library, which is declared as a dependency.
 
 ## Installation
+
+### onsemi 2N3904 formed-lead TO-92
+
+The device `2N3904 onsemi (TO-92-WIDE)` has UUID
+`2b5fbc33-c612-4a63-b278-0c080712ad91`. It reuses Base Library component
+`2e833724-610d-44d8-bd1b-e291e0002736`, symbol
+`de76a1b9-b74c-4b6e-ad88-380fab185841`, and package
+`771d5bda-eda6-4eb8-8410-46b117e3c923`. The requested `compact` footprint is
+`64fb8de7-1444-46a0-8d3e-e434e7f4febf`; LibrePCB selects footprints at
+placement time, so explicitly choose `compact` rather than `default`.
+
+The [official onsemi 2N3904/D datasheet](https://www.onsemi.com/download/data-sheet/pdf/2n3904-d.pdf)
+(October 2024, Rev. 3) defines 1=Emitter, 2=Base, 3=Collector on page 1;
+page 8 shows formed-lead case 135AR. In top/component-side view at zero
+rotation, the reused footprint has pads 1, 2, 3 at x=-2.54, 0, +2.54 mm,
+with the flat face toward negative Y (bottom). This matches the manufacturer's
+front-view E-B-C order when facing the flat side. Do not mirror the footprint
+based on the bottom-view drawing. The existing BC546 mappings and shared
+library elements are unchanged.
+
+The requested compact footprint is retained without modification. Its 0.75 mm
+holes may be tight: the datasheet's maximum rectangular terminal section of
+0.56 x 0.52 mm has a diagonal of about 0.764 mm. Worst-case fit is therefore
+not guaranteed. Check actual terminal dimensions and the fabricator's finished
+hole tolerance before manufacture. The 2N3904TA ordering code is included;
+use this footprint only for formed leads, not unformed 1.27 mm-pitch parts.
 
 ### Protected four-wire external bypass interface
 
