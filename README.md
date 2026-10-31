@@ -40,6 +40,8 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 - External switch
 - Three-position SPDT switch (`ON-OFF-ON`) with a 2.54 mm wired footprint
 - External 3PDT footswitch with nine accessible schematic contacts
+- Direct PCB-mount Musikding-style 3PDT, provisional measured 6 x 6 mm
+  nine-pad grid, with a custom approximate STEP model
 - Four-wire interface to an external 3PDT bypass and LED board
 - External Bypass Board Interface — 4 Wire: numbered, required passive signals
   `1 FX_IN`, `2 GND`, `3 FX_OUT`, `4 9V_PROTECTED`, with a matching generic
@@ -75,6 +77,55 @@ The potentiometer devices and the OPA197 SOIC-8 device reuse standard elements
 from the LibrePCB Base Library, which is declared as a dependency.
 
 ## Installation
+
+### Direct PCB-mount 3PDT: provisional measured sample
+
+Select component `3PDT Footswitch (PCB)` and device
+`Musikding 3PDT (PCB, measured 6x6)`. The package is
+`3PDT-THT-3X3-P6.00-D1.50`.
+
+The user measured the standard Musikding switch with a ruler and approved a
+provisional 6 mm pitch in both directions, 1.5 mm plated holes and 3.0 mm
+copper pads. These are sample-specific estimates, not manufacturer-certified
+dimensions. Print a 1:1 fit template, verify terminal dimensions and test
+continuity on the actual switch before manufacturing a PCB.
+
+At zero rotation, viewed from the package/component side, numbering is:
+
+```text
+1  2  3
+4  5  6
+7  8  9
+```
+
+Poles are assigned by column: `1-4-7`, `2-5-8`, `3-6-9`; commons are `4`,
+`5`, `6`. Verify that the actual switch's contact grouping matches this
+orientation. No bypass wiring, LED or resistor is included. The existing
+three-pole symbol is reused without changes; the new PCB component displays
+the matching numerical contact names.
+
+For a switch on the underside, with the actuator facing the enclosure bottom,
+place/flip the device to the **bottom side in LibrePCB**. The footprint and
+model are defined normally on the component side; do not pre-mirror pad numbers
+or independently rotate the STEP by 180 degrees. LibrePCB flips the complete
+device including the model and legend.
+
+The provided GORVA STEP was inspected as a visual reference; its 4.8 x 5.3 mm
+terminal pitch differs from this provisional measured footprint. It is not
+used as an exact Musikding model. The supplied model is instead a custom
+approximate reconstruction with a 17 x 18 mm body envelope, aligned 6 x 6 mm
+terminal grid, 1 x 0.33 mm terminal section, and approximately 42 mm total
+height. Internal geometry, hardware and mounting height are illustrative;
+check enclosure clearances against the real part. The original GORVA STEP
+has not been altered or redistributed in this library.
+
+Element UUIDs:
+
+- Reused symbol: `38202ba9-558c-40c1-adbd-dbb059e0d729`
+- Component: `68a59a76-8b83-4de4-a95b-7a241c12868c`
+- Package: `f3f6342f-7f13-4861-a7b4-bea40e750ebe`
+- Device: `d27cae83-6d3e-4c8e-a227-9383d8cf8862`
+- Model: `16b4a3ee-b65b-478a-a140-9aa186c5a930`
 
 ### onsemi 2N3904 formed-lead TO-92
 
