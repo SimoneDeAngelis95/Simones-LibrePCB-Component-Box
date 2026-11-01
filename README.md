@@ -107,6 +107,8 @@ has a diagonal of 2.236 mm, so a 2 mm round hole is insufficient. The chosen
 finished-hole tolerances and actual terminal sizes before manufacture.
 Pitch and terminal sizes are user measurements, not certified manufacturer
 dimensions. Test fit and contact grouping on the actual switch.
+All nine copper pads are circular, including A1; contact identification is
+provided by the legend labels rather than a square pad.
 
 For underside mounting with the actuator toward the enclosure bottom, place
 or flip the device to the **bottom side in LibrePCB**. Do not independently
