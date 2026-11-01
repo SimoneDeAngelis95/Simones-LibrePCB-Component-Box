@@ -80,54 +80,42 @@ from the LibrePCB Base Library, which is declared as a dependency.
 
 ### Direct PCB-mount 3PDT: provisional measured sample
 
-Select component `3PDT Footswitch (PCB)` and device
-`Musikding 3PDT (PCB, measured 6x6)`. The package is
+Component: `3PDT Footswitch (PCB)`. Device:
+`Musikding 3PDT (PCB, measured 6x6)`. Package:
 `3PDT-THT-3X3-P6.00-D1.50`.
+
+Current top/component-side view at zero rotation:
+
+```text
+C2  CC  C1
+B2  BC  B1
+A2  AC  A1
+```
+
+**B remains in the middle row**; C is at the top and A at the bottom.
+Commons CC, BC and AC are in the central column. The three poles are the
+three rows: C2-CC-C1, B2-BC-B1 and A2-AC-A1. Pad UUIDs and their electrical
+signal associations are unchanged; each legend label is placed below its
+own pad. The shared schematic symbol has not been modified.
 
 The user measured the standard Musikding switch with a ruler and approved a
 provisional 6 mm pitch in both directions, 1.5 mm plated holes and 3.0 mm
 copper pads. These are sample-specific estimates, not manufacturer-certified
-dimensions. Print a 1:1 fit template, verify terminal dimensions and test
-continuity on the actual switch before manufacturing a PCB.
+dimensions. Verify fit with the actual switch and test its contact grouping
+before manufacturing a PCB.
 
-At zero rotation, viewed from the package/component side, numbering is:
+For underside mounting with the actuator toward the enclosure bottom, place
+or flip the device to the **bottom side in LibrePCB**. Do not independently
+pre-mirror pads or invert the model.
 
-```text
-B2  BC  B1
-A2  AC  A1
-C2  CC  C1
-```
-
-Poles are assigned by row: `B2-BC-B1` (top), `A2-AC-A1` (middle),
-`C2-CC-C1` (bottom);
-commons are `AC`, `BC`, `CC`. The previous physical numbering `1..9` maps
-to the contact identities assigned before the footprint's clockwise rotation.
-The pad locations and their legend labels have been rotated 90 degrees
-clockwise, then the A and B rows were swapped while preserving each pad's
-UUID and electrical identity. BC/AC/CC are now in the central column from
-top to bottom. Pad, signal and symbol-pin UUIDs are unchanged. Verify that the actual switch's contact grouping matches this
-orientation. No bypass wiring, LED or resistor is included. The existing
-three-pole symbol is reused without changes; the new PCB component displays
-the matching contact names through the component's signal labels.
-
-For a switch on the underside, with the actuator facing the enclosure bottom,
-place/flip the device to the **bottom side in LibrePCB**. The footprint and
-model are defined normally on the component side; do not pre-mirror pad numbers
-or independently rotate the STEP by 180 degrees. LibrePCB flips the complete
-device including the model and legend.
-
-The provided GORVA STEP was inspected as a visual reference; its 4.8 x 5.3 mm
-terminal pitch differs from this provisional measured footprint. It is not
-used as an exact Musikding model. The supplied model is instead a custom
-approximate reconstruction with the 17 x 18 mm body rotated +90 degrees
-about Z (18 x 17 mm after rotation), and an aligned 6 x 6 mm
-terminal grid. The later clockwise pad/contact relocation preserves the
-same nine geometric hole locations because the grid is square; the housing
-and STEP remain unchanged during that relocation, 1 x 0.33 mm terminal
-section, and approximately 42 mm total
-height. Internal geometry, hardware and mounting height are illustrative;
-check enclosure clearances against the real part. The original GORVA STEP
-has not been altered or redistributed in this library.
+The original GORVA STEP was inspected as a visual reference only; its
+4.8 x 5.3 mm terminal pitch differs from the measured sample. It has not
+been modified or redistributed. The included STEP is a custom approximate
+reconstruction. Its 17 x 18 mm body was rotated +90 degrees about Z, giving
+an 18 x 17 mm envelope; that orientation is retained. Nine identical
+terminals occupy the fixed 6 x 6 mm grid. Total height is approximately
+42 mm. Internal geometry, mounting hardware and mounting height are
+illustrative, so check real enclosure clearances.
 
 Element UUIDs:
 
