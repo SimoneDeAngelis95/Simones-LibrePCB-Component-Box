@@ -93,16 +93,19 @@ continuity on the actual switch before manufacturing a PCB.
 At zero rotation, viewed from the package/component side, numbering is:
 
 ```text
-A2  AC  A1
 B2  BC  B1
+A2  AC  A1
 C2  CC  C1
 ```
 
-Poles are assigned by row: `A2-AC-A1`, `B2-BC-B1`, `C2-CC-C1`;
+Poles are assigned by row: `B2-BC-B1` (top), `A2-AC-A1` (middle),
+`C2-CC-C1` (bottom);
 commons are `AC`, `BC`, `CC`. The previous physical numbering `1..9` maps
 to the contact identities assigned before the footprint's clockwise rotation.
 The pad locations and their legend labels have been rotated 90 degrees
-clockwise; AC/BC/CC are now in the central column. Pad, signal and symbol-pin UUIDs are unchanged. Verify that the actual switch's contact grouping matches this
+clockwise, then the A and B rows were swapped while preserving each pad's
+UUID and electrical identity. BC/AC/CC are now in the central column from
+top to bottom. Pad, signal and symbol-pin UUIDs are unchanged. Verify that the actual switch's contact grouping matches this
 orientation. No bypass wiring, LED or resistor is included. The existing
 three-pole symbol is reused without changes; the new PCB component displays
 the matching contact names through the component's signal labels.
