@@ -93,16 +93,17 @@ continuity on the actual switch before manufacturing a PCB.
 At zero rotation, viewed from the package/component side, numbering is:
 
 ```text
-1  2  3
-4  5  6
-7  8  9
+A1  B1  C1
+AC  BC  CC
+A2  B2  C2
 ```
 
-Poles are assigned by column: `1-4-7`, `2-5-8`, `3-6-9`; commons are `4`,
-`5`, `6`. Verify that the actual switch's contact grouping matches this
+Poles are assigned by column: `A1-AC-A2`, `B1-BC-B2`, `C1-CC-C2`;
+commons are `AC`, `BC`, `CC`. The previous physical numbering `1..9` maps
+row by row to these names. Pad, signal and symbol-pin UUIDs are unchanged. Verify that the actual switch's contact grouping matches this
 orientation. No bypass wiring, LED or resistor is included. The existing
 three-pole symbol is reused without changes; the new PCB component displays
-the matching numerical contact names.
+the matching contact names through the component's signal labels.
 
 For a switch on the underside, with the actuator facing the enclosure bottom,
 place/flip the device to the **bottom side in LibrePCB**. The footprint and
@@ -113,8 +114,10 @@ device including the model and legend.
 The provided GORVA STEP was inspected as a visual reference; its 4.8 x 5.3 mm
 terminal pitch differs from this provisional measured footprint. It is not
 used as an exact Musikding model. The supplied model is instead a custom
-approximate reconstruction with a 17 x 18 mm body envelope, aligned 6 x 6 mm
-terminal grid, 1 x 0.33 mm terminal section, and approximately 42 mm total
+approximate reconstruction with the 17 x 18 mm body rotated +90 degrees
+about Z (18 x 17 mm after rotation), and an aligned 6 x 6 mm
+terminal grid that stays fixed during the body rotation, 1 x 0.33 mm terminal
+section, and approximately 42 mm total
 height. Internal geometry, hardware and mounting height are illustrative;
 check enclosure clearances against the real part. The original GORVA STEP
 has not been altered or redistributed in this library.

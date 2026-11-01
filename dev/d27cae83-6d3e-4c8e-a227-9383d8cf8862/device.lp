@@ -1,9 +1,9 @@
 (librepcb_device d27cae83-6d3e-4c8e-a227-9383d8cf8862
  (name "Musikding 3PDT (PCB, measured 6x6)")
- (description "Direct PCB-mount 3PDT footswitch, provisional Musikding sample geometry measured with a ruler: 6 x 6 mm pitch, 1.5 mm plated holes, 3.0 mm pads. Top-view zero-rotation numbering 1 2 3 / 4 5 6 / 7 8 9. Poles are columns 1-4-7, 2-5-8, 3-6-9; commons 4/5/6. Verify terminal fit and continuity with actual switch before fabrication. Place on BOTTOM side in the board editor for actuator toward enclosure bottom; do not pre-mirror pads or invert model. Model is a custom approximate reconstruction, not certified Musikding CAD; Gorva STEP used for visual reference only.")
+ (description "Direct PCB-mount 3PDT footswitch, provisional Musikding sample measured with a ruler: 6 x 6 mm pitch, 1.5 mm plated holes, 3.0 mm pads. Top/component-side zero-rotation contacts: A1 B1 C1 / AC BC CC / A2 B2 C2. AC, BC and CC are commons; each column is one changeover pole. Legacy physical pad numbers 1..9 follow row-major order. Housing and hardware rotated +90 degrees about Z within the custom STEP; terminals and their seals retain original pad positions. Place on BOTTOM side for actuator toward enclosure bottom. Verify real-sample fit and continuity. Custom approximate reconstruction, not certified Musikding CAD; original Gorva STEP only a visual reference.")
  (keywords "3PDT,footswitch,Musikding,PCB,6mm,measured,provisional")
  (author "Simone De Angelis")
- (version "0.1")
+ (version "0.2")
  (created 2026-10-31T00:00:00Z)
  (deprecated false)
  (generated_by "")
