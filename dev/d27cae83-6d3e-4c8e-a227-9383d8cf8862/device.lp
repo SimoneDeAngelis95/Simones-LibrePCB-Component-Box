@@ -1,6 +1,6 @@
 (librepcb_device d27cae83-6d3e-4c8e-a227-9383d8cf8862
  (name "Musikding 3PDT (PCB, measured 5x5)")
- (description "Provisional measured Musikding 3PDT PCB footswitch. Top/component-side view at zero rotation: C2 CC C1 / B2 BC B1 / A2 AC A1. B stays in the middle row; C is the top row and A the bottom row. Commons CC, BC and AC form the central column. Each row is one changeover pole. Pad UUIDs and electrical signal associations are unchanged. Grid 6 x 6 mm, plated holes 1.5 mm, copper pads 3.0 mm. Symbol unchanged. Existing custom approximate STEP body orientation retained. Place device on board bottom for actuator toward enclosure bottom. Confirm real-sample fit and continuity before manufacture.")
+ (description "Provisional measured Musikding 3PDT PCB footswitch. Top/component-side view at zero rotation: C2 CC C1 / B2 BC B1 / A2 AC A1. B stays in the middle row; C is the top row and A the bottom row. Commons CC, BC and AC form the central column. Each row is one changeover pole. Pad UUIDs and electrical signal associations are unchanged. Grid 5 x 5 mm, plated holes 2.5 mm, copper pads 4.0 mm; terminals approximately 2 x 1 mm. Labels placed diagonally below/right of their own pads. Symbol unchanged. Existing custom approximate STEP body orientation retained. Place device on board bottom for actuator toward enclosure bottom. Confirm real-sample fit and continuity before manufacture.")
  (keywords "3PDT,footswitch,Musikding,PCB,6mm,measured,provisional")
  (author "Simone De Angelis")
  (version "0.2")
