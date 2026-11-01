@@ -40,8 +40,8 @@ The current release was created and tested with **LibrePCB 2.1.1**.
 - External switch
 - Three-position SPDT switch (`ON-OFF-ON`) with a 2.54 mm wired footprint
 - External 3PDT footswitch with nine accessible schematic contacts
-- Direct PCB-mount Musikding-style 3PDT, provisional measured 6 x 6 mm
-  nine-pad grid, with a custom approximate STEP model
+- Direct PCB-mount Musikding-style 3PDT, measured 5 x 5 mm
+  nine-pad grid with 2.5 mm holes and 4 mm copper pads, with a custom approximate STEP model
 - Four-wire interface to an external 3PDT bypass and LED board
 - External Bypass Board Interface — 4 Wire: numbered, required passive signals
   `1 FX_IN`, `2 GND`, `3 FX_OUT`, `4 9V_PROTECTED`, with a matching generic
@@ -81,8 +81,8 @@ from the LibrePCB Base Library, which is declared as a dependency.
 ### Direct PCB-mount 3PDT: provisional measured sample
 
 Component: `3PDT Footswitch (PCB)`. Device:
-`Musikding 3PDT (PCB, measured 6x6)`. Package:
-`3PDT-THT-3X3-P6.00-D1.50`.
+`Musikding 3PDT (PCB, measured 5x5)`. Package:
+`3PDT-THT-3X3-P5.00-D2.50`.
 
 Current top/component-side view at zero rotation:
 
@@ -95,14 +95,18 @@ A2  AC  A1
 **B remains in the middle row**; C is at the top and A at the bottom.
 Commons CC, BC and AC are in the central column. The three poles are the
 three rows: C2-CC-C1, B2-BC-B1 and A2-AC-A1. Pad UUIDs and their electrical
-signal associations are unchanged; each legend label is placed below its
-own pad. The shared schematic symbol has not been modified.
+signal associations are unchanged; each legend label is placed diagonally below/right of its own pad to
+keep readable text away from the enlarged solder mask openings. The shared schematic symbol has not been modified.
 
-The user measured the standard Musikding switch with a ruler and approved a
-provisional 6 mm pitch in both directions, 1.5 mm plated holes and 3.0 mm
-copper pads. These are sample-specific estimates, not manufacturer-certified
-dimensions. Verify fit with the actual switch and test its contact grouping
-before manufacturing a PCB.
+The user confirmed 5 mm centre-to-centre pitch horizontally and vertically,
+and 10 mm between the outer terminal centres, replacing the earlier 6 mm
+estimate. Terminal cross-section is approximately 2 x 1 mm. Round plated
+holes are now 2.5 mm, with 4.0 mm copper pads. A 2 x 1 mm rectangular lead
+has a diagonal of 2.236 mm, so a 2 mm round hole is insufficient. The chosen
+2.5 mm drill gives nominal radial corner clearance of about 0.132 mm; check
+finished-hole tolerances and actual terminal sizes before manufacture.
+Pitch and terminal sizes are user measurements, not certified manufacturer
+dimensions. Test fit and contact grouping on the actual switch.
 
 For underside mounting with the actuator toward the enclosure bottom, place
 or flip the device to the **bottom side in LibrePCB**. Do not independently
@@ -112,8 +116,8 @@ The original GORVA STEP was inspected as a visual reference only; its
 4.8 x 5.3 mm terminal pitch differs from the measured sample. It has not
 been modified or redistributed. The included STEP is a custom approximate
 reconstruction. Its 17 x 18 mm body was rotated +90 degrees about Z, giving
-an 18 x 17 mm envelope; that orientation is retained. Nine identical
-terminals occupy the fixed 6 x 6 mm grid. Total height is approximately
+an 18 x 17 mm envelope; that orientation is retained. Nine 2 x 1 mm
+terminals occupy the fixed 5 x 5 mm grid. Total height is approximately
 42 mm. Internal geometry, mounting hardware and mounting height are
 illustrative, so check real enclosure clearances.
 
